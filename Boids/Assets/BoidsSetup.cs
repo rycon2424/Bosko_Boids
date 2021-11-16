@@ -31,7 +31,6 @@ public class BoidsSetup : MonoBehaviour
     [Space]
     [Range(0, 10)] public float minSpeed = 1;
     [Range(0, 10)] public float maxSpeed = 5;
-    [Range(0, 10)] public float maxForce = 1;
 
     Boid[] boids;
 
