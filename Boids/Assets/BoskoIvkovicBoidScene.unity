@@ -839,22 +839,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seperate: 1
   coherate: 1
-  align: 1
+  align: 0
+  seperation: 0.5
+  alignment: 0.5
+  cohesion: 0.4
   only2D: 0
   camera2D: {fileID: 1266838606}
   camera3D: {fileID: 519420028}
-  boidsAmount: 50
+  boidsAmount: 150
   boidPrefab: {fileID: 2719639390937173247, guid: 2b7143e4be44bf348953b305aa194b78, type: 3}
   spawnRangeX: 14.5
   spawnRangeY: 12
   spawnRangeZ: 14
   boidRadius: 1
-  seperation: 0.5
-  alignment: 0.5
-  cohesion: 0.2
-  minSpeed: 1
-  maxSpeed: 3
-  maxForce: 1
+  minSpeed: 2
+  maxSpeed: 6
 --- !u!4 &606369911
 Transform:
   m_ObjectHideFlags: 0

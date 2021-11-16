@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class BoidsSetup : MonoBehaviour
 {
-    [Header("Main Settings")]
+    [Header("Main Settings / Works Runtime")]
     public bool seperate = true;
     public bool coherate = true;
     public bool align = true;
     [Space]
+    [Range(0, 1)] public float seperation = 0.2f;
+    [Range(0, 1)] public float alignment = 0.5f;
+    [Range(0, 1)] public float cohesion = 0.5f;
+
+    [Header("Cam/Simulation Settings")]
     public bool only2D; // Shows boids in 2d
     [Space]
     public GameObject camera2D;
@@ -24,10 +29,6 @@ public class BoidsSetup : MonoBehaviour
 
     [Header("Boid Settings")]
     public float boidRadius = 1;
-    [Space]
-    [Range(0, 1)] public float seperation = 0.2f;
-    [Range(0, 1)] public float alignment = 0.5f;
-    [Range(0, 1)] public float cohesion = 0.5f;
     [Space]
     [Range(0, 10)] public float minSpeed = 1;
     [Range(0, 10)] public float maxSpeed = 5;

@@ -69,7 +69,7 @@ public class Boid : MonoBehaviour
             return;
         center /= total;
         Vector3 target = center - transform.position;
-        Vector3 force = (target - accelleration) * cohesionStrength / 10;
+        Vector3 force = (target - accelleration) * cohesionStrength / 2;
         accelleration += force;
         accelleration.Normalize();
     }
@@ -90,7 +90,7 @@ public class Boid : MonoBehaviour
         if (total == 0)
             return;
         target /= total;
-        Vector3 force = (target - accelleration) * alignmentStrength / 10;
+        Vector3 force = (target - accelleration) * alignmentStrength / 5;
         accelleration += force;
         accelleration.Normalize();
     }
