@@ -839,10 +839,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seperate: 1
   coherate: 1
-  align: 0
+  align: 1
   seperation: 0.5
   alignment: 0.5
-  cohesion: 0.4
+  cohesion: 0.2
   only2D: 0
   camera2D: {fileID: 1266838606}
   camera3D: {fileID: 519420028}
