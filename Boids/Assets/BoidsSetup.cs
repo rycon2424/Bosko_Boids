@@ -17,6 +17,7 @@ public class BoidsSetup : MonoBehaviour
     [Header("Spawn Settings")]
     public int boidsAmount = 20;
     public GameObject boidPrefab;
+    [Header("Cube/SpawnRange Settings")]
     public float spawnRangeX;
     public float spawnRangeY;
     public float spawnRangeZ;
@@ -65,11 +66,11 @@ public class BoidsSetup : MonoBehaviour
             if (only2D)
             {
                 randomStartSpeed.z = 0;
-                tempBoid.SetupBoid(spawnRangeX + 1, spawnRangeY + 1, 0, boidRadius, defaultSpeed, randomStartSpeed);
+                tempBoid.SetupBoid(spawnRangeX, spawnRangeY, 0, boidRadius, defaultSpeed, randomStartSpeed);
             }
             else
             {
-                tempBoid.SetupBoid(spawnRangeX + 1, spawnRangeY + 1, spawnRangeZ + 1, boidRadius, defaultSpeed, randomStartSpeed);
+                tempBoid.SetupBoid(spawnRangeX, spawnRangeY, spawnRangeZ, boidRadius, defaultSpeed, randomStartSpeed);
             }
             boids[i] = tempBoid;
         }
@@ -93,6 +94,12 @@ public class BoidsSetup : MonoBehaviour
                 b.Alignment(boids, alignment);
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(new Vector3((spawnRangeX) / 2, (spawnRangeY) / 2, (spawnRangeZ) / 2), new Vector3(spawnRangeX, spawnRangeY, spawnRangeZ));
     }
 
 }

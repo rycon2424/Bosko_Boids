@@ -845,8 +845,8 @@ MonoBehaviour:
   camera3D: {fileID: 519420028}
   boidsAmount: 50
   boidPrefab: {fileID: 2719639390937173247, guid: 2b7143e4be44bf348953b305aa194b78, type: 3}
-  spawnRangeX: 14
-  spawnRangeY: 10.3
+  spawnRangeX: 14.5
+  spawnRangeY: 12
   spawnRangeZ: 14
   boidRadius: 1
   seperation: 0.5
