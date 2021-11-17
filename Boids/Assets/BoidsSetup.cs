@@ -9,9 +9,9 @@ public class BoidsSetup : MonoBehaviour
     public bool coherate = true;
     public bool align = true;
     [Space]
-    [Range(0, 1)] public float seperation = 0.2f;
-    [Range(0, 1)] public float alignment = 0.5f;
-    [Range(0, 1)] public float cohesion = 0.5f;
+    [Range(0, 1)] public float seperationWeight = 0.2f;
+    [Range(0, 1)] public float alignmentWeight = 0.5f;
+    [Range(0, 1)] public float cohesionWeight = 0.5f;
 
     [Header("Cam/Simulation Settings")]
     public bool only2D; // Shows boids in 2d
@@ -83,15 +83,15 @@ public class BoidsSetup : MonoBehaviour
             b.MoveBoid();
             if (seperate)
             {
-                b.Seperation(boids, seperation);
+                b.Seperation(boids, seperationWeight);
             }
             if (coherate)
             {
-                b.Cohesion(boids, cohesion);
+                b.Cohesion(boids, cohesionWeight);
             }
             if (align)
             {
-                b.Alignment(boids, alignment);
+                b.Alignment(boids, alignmentWeight);
             }
         }
     }
